@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048小游戏</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .score-container, .start-game {
+            margin: 10px;
+        }
+        .grid {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>2048</h1>
+        <div class="header">
+            <div class="score-container">
+                <div class="score-title">分数</div>
+                <div class="score">0</div>
+            </div>
+            <button class="start-game">开始游戏</button>
+            <button class="toggle-theme">切换主题</button>
+        </div>
+        <div class="instructions">
+            <p>使用方向键移动方块。当两个相同数字的方块碰撞时，它们会合并成一个更大的数字。目标是达到2048！</p>
+        </div>
+        <div class="grid"></div>
+        <div class="game-over" style="display: none;">
+            <p>游戏结束！</p>
+            <button class="restart-game">再玩一次</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
